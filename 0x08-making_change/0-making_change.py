@@ -10,7 +10,8 @@ def makeChange(coins, total):
     if total <= 0:
         return 0
     noc = 0
-    for i in sorted(coins, reverse=True):
+    coins.sort(reverse=True)
+    for i in coins:
         q = total / i
         noc += q
         total %= i
